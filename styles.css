@@ -1,19 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;700&display=swap');
+:root {
+    /* Colors */
+    --color-primary: #232323;
+    --color-secondary: #434343;
+    --color-accent: #2979FF;
+    --color-background: #fff;
+    --color-surface: #ededed;
+    --color-surface-light: #f5f5f5;
+    --color-text-primary: #232323;
+    --color-text-secondary: #434343;
+    --color-text-light: #ededed;
+    --color-white: #fff;
+    
+    /* Typography */
+    --font-primary: 'Inter', Arial, sans-serif;
+    --font-secondary: 'Caveat', cursive;
+    --font-fallback: 'Segoe UI', Arial, sans-serif;
+}
 
 html, body {
     overflow-x: hidden;
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #fff;
+    font-family: var(--font-fallback);
+    background: var(--color-background);
     margin: 0;
-    color: #232323;
+    color: var(--color-text-primary);
 }
 
 .navbar {
-    background: #232323;
-    color: #fff;
+    background: var(--color-primary);
+    color: var(--color-white);
     padding: 0;
     box-shadow: 0 2px 8px rgba(35,35,35,0.04);
 }
@@ -27,10 +44,10 @@ body {
     height: 60px;
 }
 .nav-logo {
-    font-family: 'Inter', Arial, sans-serif;
+    font-family: var(--font-primary);
     font-size: 1.3em;
     font-weight: 700;
-    color: #fff;
+    color: var(--color-white);
     background: none;
     border-radius: 0;
     padding: 0 8px;
@@ -47,19 +64,19 @@ body {
     padding: 0;
 }
 .nav-links li a {
-    color: #fff;
+    color: var(--color-white);
     text-decoration: none;
     font-weight: 500;
     font-size: 1em;
     transition: color 0.2s;
 }
 .nav-links li a:hover {
-    color: #434343;
+    color: var(--color-secondary);
 }
 
 .hero, .playful-hero {
-    background: linear-gradient(90deg, #434343 0%, #232323 100%);
-    color: #fff;
+    background: linear-gradient(90deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+    color: var(--color-white);
     padding: 60px 0 40px 0;
     text-align: center;
 }
@@ -72,7 +89,7 @@ body {
 .intro {
     font-size: 1.2em;
     margin-top: 18px;
-    color: #ededed;
+    color: var(--color-text-light);
     font-weight: 400;
 }
 
@@ -83,42 +100,42 @@ body {
 }
 
 section {
-    background: #fff;
+    background: var(--color-background);
     border-radius: 14px;
     box-shadow: 0 4px 16px rgba(67,67,67,0.07);
     margin-bottom: 32px;
     padding: 32px 24px;
 }
 section h2 {
-    color: #232323;
+    color: var(--color-text-primary);
     margin-top: 0;
     font-size: 1.7em;
     font-weight: 700;
 }
 
 .highlight {
-    background: #ededed;
-    border-left: 6px solid #434343;
+    background: var(--color-surface);
+    border-left: 6px solid var(--color-secondary);
     border-radius: 10px;
     margin-bottom: 20px;
     padding: 16px 20px;
     box-shadow: 0 2px 8px rgba(67,67,67,0.04);
 }
 .highlight h3, .featured-content h3 {
-    color: #232323;
+    color: var(--color-text-primary);
     font-size: 1.5em;
     font-weight: 700;
     margin: 0 0 20px 0;
 }
 .highlight p, .featured-content p, .about-card p {
-    color: #434343;
+    color: var(--color-text-secondary);
     font-size: 1.1em;
     margin: 0;
 }
 
 footer {
-    background: #232323;
-    color: #fff;
+    background: var(--color-primary);
+    color: var(--color-white);
     text-align: center;
     padding: 18px 0;
     font-size: 1em;
@@ -126,13 +143,13 @@ footer {
     font-weight: 500;
 }
 a {
-    color: #434343;
+    color: var(--color-text-secondary);
     text-decoration: underline;
     transition: color 0.2s;
     font-weight: 500;
 }
 a:hover {
-    color: #232323;
+    color: var(--color-text-primary);
 }
 
 .chevron-down {
@@ -161,15 +178,15 @@ a:hover {
     align-items: center;
     gap: 0.2em;
     margin: 0;
-    font-family: 'Inter', Arial, sans-serif;
+    font-family: var(--font-primary);
     font-size: 2.1em;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.5px;
 }
 .hero-script, .about-script {
-    font-family: 'Caveat', cursive;
-    color: #2979FF;
+    font-family: var(--font-secondary);
+    color: var(--color-accent);
     font-size: 1.3em;
     font-weight: 700;
     display: block;
@@ -177,9 +194,9 @@ a:hover {
     margin-bottom: 0.1em;
 }
 .hero-main {
-    font-family: 'Inter', Arial, sans-serif;
+    font-family: var(--font-primary);
     font-size: 1em;
-    color: #fff;
+    color: var(--color-white);
     font-weight: 700;
     margin: 0.2em 0 0.2em 0;
     display: block;
@@ -188,7 +205,7 @@ a:hover {
 .featured-cards-section {
     width: 100%;
     max-width: 100vw;
-    background: #f5f5f5;
+    background: var(--color-surface-light);
     margin: 0;
     padding: 0 0 64px 0;
 }
@@ -205,7 +222,7 @@ a:hover {
     align-items: stretch;
     width: 100%;
     max-width: 100vw;
-    background: #fff;
+    background: var(--color-background);
     box-shadow: 0 4px 24px rgba(67,67,67,0.07);
     border-radius: 18px;
     overflow: hidden;
@@ -222,7 +239,7 @@ a:hover {
     display: flex;
     align-items: stretch;
     justify-content: center;
-    background: #ededed;
+    background: var(--color-surface);
 }
 .featured-img img {
     width: 100%;
@@ -238,7 +255,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #fff;
+    background: var(--color-background);
 }
 
 @media (max-width: 900px) {
@@ -268,7 +285,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #ededed;
+    background: var(--color-surface);
     padding: 0 0 64px 0;
 }
 .about-card {
@@ -284,21 +301,21 @@ a:hover {
     align-items: center;
 }
 .about-card h2 {
-    color: #232323;
+    color: var(--color-text-primary);
     font-size: 2em;
     font-weight: 700;
     margin: 0 0 24px 0;
     text-align: center;
 }
 .about-card p {
-    color: #434343;
+    color: var(--color-text-secondary);
     font-size: 1.18em;
     line-height: 1.7;
     text-align: center;
     margin: 0;
 }
 .about-strong {
-    color: #232323;
+    color: var(--color-text-primary);
     font-weight: 700;
 }
 @media (max-width: 900px) {
@@ -314,8 +331,8 @@ a:hover {
 }
 
 .about-main {
-    font-family: 'Inter', Arial, sans-serif;
-    color: #434343;
+    font-family: var(--font-primary);
+    color: var(--color-text-secondary);
     font-size: 1.1em;
     font-weight: 700;
     display: block;
@@ -330,7 +347,7 @@ a:hover {
     border-radius: 16px;
     box-shadow: 0 2px 12px rgba(67,67,67,0.10);
     object-fit: cover;
-    background: #fff;
+    background: var(--color-background);
 }
 
 .contact-card-section {
@@ -339,11 +356,11 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
+    background: var(--color-background);
     padding: 0 0 64px 0;
 }
 .contact-card {
-    background: #fff;
+    background: var(--color-background);
     border-radius: 18px;
     box-shadow: none;
     max-width: 540px;
@@ -355,26 +372,26 @@ a:hover {
     align-items: center;
 }
 .contact-card h2 {
-    color: #232323;
+    color: var(--color-text-primary);
     font-size: 2em;
     font-weight: 700;
     margin: 0 0 24px 0;
     text-align: center;
-    font-family: 'Inter', Arial, sans-serif;
+    font-family: var(--font-primary);
 }
 .contact-card p {
-    color: #434343;
+    color: var(--color-text-secondary);
     font-size: 1.13em;
     line-height: 1.7;
     text-align: center;
     margin: 0 0 12px 0;
-    font-family: 'Inter', Arial, sans-serif;
+    font-family: var(--font-primary);
 }
 .contact-card a {
-    color: #434343;
+    color: var(--color-text-secondary);
     font-weight: 700;
     text-decoration: underline;
-    font-family: 'Inter', Arial, sans-serif;
+    font-family: var(--font-primary);
 }
 @media (max-width: 900px) {
     .contact-card {
@@ -407,7 +424,7 @@ a:hover {
     width: 26px;
     height: 3px;
     margin: 4px 0;
-    background: #fff;
+    background: var(--color-white);
     border-radius: 2px;
     transition: all 0.3s;
 }
@@ -421,7 +438,7 @@ a:hover {
         top: 60px;
         right: 0;
         left: 0;
-        background: #232323;
+        background: var(--color-primary);
         flex-direction: column;
         align-items: center;
         gap: 0;
